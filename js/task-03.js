@@ -14,9 +14,8 @@ const images = [
 ];
 const arrImages=document.querySelector("ul.gallery");
 
-const image=`<li><img width="350" src =${images[0].url} alt=${images[0].alt}></li>
-<li><img width=350 src =${images[1].url} alt=${images[1].alt}></li>
-<li><img width=350  src =${images[2].url} alt=${images[2].alt}></li>`
+const image = images.map(el => `<li><img width="350" src ="${el.url}" alt="${el.alt}"}></li>` )
+
 
 arrImages.insertAdjacentHTML("afterbegin",image);
 console.log(arrImages.children);

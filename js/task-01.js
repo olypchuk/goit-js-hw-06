@@ -1,34 +1,18 @@
-// Number of categories: 3
+const list =document.querySelector('#categories');
 
-// Category: Animals
-// Elements: 4
-
-// Category: Products
-// Elements: 3
-
-// Category: Technologies
-// Elements: 5
- const list =document.querySelector('#categories');
-
- const listItems=list.querySelectorAll('li.item');
+const listItems = list.querySelectorAll('li.item');
  console.log(`Number of categories :${listItems.length}`);
- const listEls=list.querySelector('li.item');
 
- const first=list.querySelector('h2').textContent;
- console.log(`Category: ${first}`);
- const amountFirstEls=listEls.querySelectorAll('li')
- console.log(`Elements:${amountFirstEls.length}`);
 
-const secondEl=listEls.nextElementSibling.querySelector('h2').textContent;
-console.log(`Category: ${secondEl}`);
-const amountSecondEls=listEls.nextElementSibling.querySelectorAll('li')
-console.log(`Elements:${amountSecondEls.length}`);
+const amount = () => {
+    for (let item of listItems) {
+  console.log("Category :",item.querySelector('h2').textContent);
+  console.log("Elements:",item.querySelectorAll("ul>li").length);
+    }   
+ 
+}
+amount()
 
-const thirdEl=list.lastElementChild.querySelector('h2').textContent;
-console.log(`Category: ${thirdEl}`);
-
-const amountThirdEls=list.lastElementChild.querySelectorAll('li')
-console.log(`Elements:${amountThirdEls.length}`);
 
 
 
