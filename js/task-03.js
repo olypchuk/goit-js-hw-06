@@ -14,10 +14,12 @@ const images = [
 ];
 const arrImages=document.querySelector("ul.gallery");
 
-const image = images.map(el => `<li><img width="350" src ="${el.url}" alt="${el.alt}"}></li>` )
+const image = images.map(el => `<li><img width="350" src ="${el.url}" alt="${el.alt}"}></li>`).join("");
 
 
-arrImages.insertAdjacentHTML("afterbegin",image);
+arrImages.innerHTML+=image
+
+
 console.log(arrImages.children);
 const imageEl=document.querySelector("li");
 arrImages.style.display="flex";

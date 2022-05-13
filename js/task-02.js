@@ -10,13 +10,16 @@ const listEl=document.querySelector("ul#ingredients");
 
 
 const createEls = ()=>{
- 
+  let arr=[];
   ingredients.forEach(elem => {
     const el = document.createElement('li');
     el.textContent = elem;
     el.classList.add("item");
-    listEl.append(el)
+    
+    arr.push(el);
   })
+  listEl.append(...arr)
 
 }
+
 createEls()
