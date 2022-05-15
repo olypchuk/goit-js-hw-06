@@ -3,14 +3,14 @@ const listItems = list.querySelectorAll('li.item');
  console.log(`Number of categories :${listItems.length}`);
 
 const amount = () => {
-  for (let item of listItems) {
+  listItems.forEach(item=>{
     const firstEl = item.firstElementChild;
     const lastEl = item.lastElementChild;
 
   console.log("Category :",firstEl.textContent);
   console.log("Elements:",lastEl.children.length);
     }   
- 
+ ) 
 }
 amount()
 
